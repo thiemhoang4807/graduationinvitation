@@ -1,0 +1,179 @@
+/* Font chữ */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('grad photo.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+.invitation-card {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.invitation-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+    z-index: 1;
+}
+
+.invitation-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+h1 {
+    color: #d23669;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.divider {
+    height: 3px;
+    background: linear-gradient(to right, transparent, #d23669, transparent);
+    margin: 20px auto;
+    width: 50%;
+    border-radius: 3px;
+}
+
+.intro-text {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: #555;
+    font-weight: 500;
+}
+
+.details {
+    margin: 30px auto;
+    text-align: left;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.detail-item {
+    margin: 15px 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.icon {
+    margin-right: 15px;
+    font-size: 1.3rem;
+    min-width: 25px;
+    text-align: center;
+}
+
+.closing-text {
+    font-style: italic;
+    margin: 30px 0;
+    font-size: 1.2rem;
+    color: #666;
+    background: rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.signature {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-top: 40px;
+    color: #d23669;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.signature::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #d23669, transparent);
+}
+
+.flowers {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+    color: #f8a5c2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hiệu ứng khi di chuột vào */
+.detail-item:hover {
+    transform: translateX(10px);
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive cho mobile */
+@media (max-width: 600px) {
+    .invitation-card {
+        padding: 25px;
+        margin: 20px auto;
+        backdrop-filter: blur(5px);
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .intro-text {
+        font-size: 1.1rem;
+    }
+    
+    .details {
+        padding: 15px;
+        width: 90%;
+    }
+    
+    .detail-item {
+        font-size: 1rem;
+    }
+}
